@@ -1,0 +1,12 @@
+teams:
+  Team1:
+    api_token: "xoxp-12345-124-123455"
+    bot_token: "xoxb-98765-999-999999"
+    skip_integrations: False
+    integration_whitelist:
+      A2: 
+        - "admin"
+        - "chat:write:user"
+    user_issue_whitelist:
+      - "sms"
+    output_channel: "@bob"
