@@ -35,9 +35,13 @@ Once you enter that information, you will be taken to the detailed settings for 
 In the OAuth section select the following permissions. In an effort to make you a bit more comfortable with granting these, each will be listed with a full description of what we use it for below:
 
 > admin            - Used to access integration logs.
+
 > bot              - Used to act as the bot user.
+
 > chat:write:bot   - Used to send messages as our bot.
+
 > files:write:user - Used to upload messages as files if too large.
+
 > users:read       - Used to access the user list.
 
 Once you have granted those permissions, install the app and take note of the OAuth tokens that have been generated for you.
@@ -53,31 +57,49 @@ The format of the config file is standard YAML formatting. If only one team is t
 Within a team dictionary, the following keys are valid and may have the following values:
 
 > api\_token                    - A string token
+
 > bot\_token                    - A string token
+
 > skip\_integrations            - A boolean that skips the audit of active integrations
+
 > integration\_whitelist        - A dictionary (key=integration\_id) of lists of issues to ignore
+
 > integration\_issue\_whitelist - A list of issues to ignore
+
 > user\_whitelist               - A dictionary (key=id) of lists of issues to ignore
+
 > user\_issue\_whitelist        - A list of issues to ignore
+
 > output\_channel               - The Slack channel name in which to output our results
 
 Possible values for the issues with integrations are:
 
 > legacy
+
 > admin
+
 > chat:write:user
+
 > channels:history
+
 > files:read
+
 > files:write:user
+
 > groups:history
+
 > im:history
+
 > mpim:history
+
 > pins:read
+
 > search:read
 
 Possible values for the issues with users are:
 
 > 2fa
+
 > sms
 
 An example of how one might construct an actual working configuration from this is included in `example.yml`.
