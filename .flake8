@@ -1,0 +1,4 @@
+[flake8]
+exclude = .git
+# 79 character limit is impractical with a 4 space indent...
+ignore = E501

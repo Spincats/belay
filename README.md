@@ -1,6 +1,6 @@
 # belay
 
-A simple python utility for checking up on your Slack organization.
+A simple python utility for checking up on your Slack organization. It's sort of like AWS Config Audit, but for a Slack team.
 
 ## Setup
 
